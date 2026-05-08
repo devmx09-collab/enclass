@@ -105,11 +105,15 @@
       </div>
 
      <!-- Hero as CSS background. Hidden img (sr-only) keeps semantic alt for screen readers and crawlers. -->
-<header>
-  <picture>
-    <img src="/womanonbeach400.jpg"
-      alt="Woman on the beach"
-</header>
+<img
+  src="/images/womanonbeach800.jpg"
+  srcset="/images/womanonbeach400.jpg 400w,
+          /images/womanonbeach800.jpg 800w,
+          /images/womanonbeach1600.jpg 1600w,
+          /images/womanonbeach3200.jpg 3200w"
+  sizes="(max-width:600px) 100vw, 800px"
+  alt="Woman on the beach"
+  style="width:100%;height:auto;display:block;object-fit:cover;">
 
     <main>
       <section>
