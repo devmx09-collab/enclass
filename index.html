@@ -110,22 +110,7 @@
             sizes="(min-width:1200px) 1200px, (min-width:768px) 768px, 100vw">
           -->
 
-          /* Minimal override to show whole image (no cropping) */
-.card-media img {
-  width: 100% !important;
-  height: auto !important;
-  max-height: 60vh;           /* optional limit for very tall images */
-  display: block !important;
-  object-fit: contain;        /* show entire image, may letterbox */
-  object-position: center;
-  background-color: transparent; /* prevents visible gaps if container BG shows */
-}
-
-/* Keep container from forcing overflow */
-.card-media {
-  overflow: hidden;
-  max-width: 100%;
-}
+          
           <source
             type="image/jpeg"
             srcset="/womanonbeach3200.jpg 3200w, /womanonbeach1600.jpg 1600w, /womanonbeach800.jpg 800w, /womanonbeach400.jpg 400w"
