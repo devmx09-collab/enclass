@@ -105,6 +105,49 @@
   display:block !important;
 }
     .hero-overlay{ position:absolute; inset:0; pointer-events:none; background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(0,0,0,0.04)); }
+    
+/* Ensure hero media is in-flow and shows as a right-side thumbnail on wide screens /
+.topbar{ position:relative; align-items:center; }
+.hero-media-wrap{
+position:relative;
+display:block;
+width:100%;
+max-width:100%;
+border-radius:var(--radius);
+overflow:hidden;
+background:#eaf3ff;
+height: clamp(120px, 18vh, 360px);
+min-height:120px;
+}
+/ thumbnail style for larger viewports */
+@media (min-width:880px){
+.topbar{ align-items:flex-start; }
+.hero-media-wrap{
+position:absolute;
+right:calc(var(--container-padding) * -1);
+top:6px;
+width:92px;
+height:calc(100% - 12px);
+border-top-left-radius:16px;
+border-bottom-left-radius:16px;
+border-top-right-radius:8px;
+border-bottom-right-radius:8px;
+box-shadow:0 6px 18px rgba(20,30,60,0.06);
+}
+.hero-media-wrap img{ object-fit:cover; object-position:center right; width:100%; height:100%; display:block; }
+}
+
+Image path troubleshooting checklist (do this if image still doesn't appear):
+Confirm files exist at /womanonbeach800.jpg (or use full absolute URL starting with https://).
+Test with a known public image URL (e.g., https://images.unsplash.com/photo-... ) to rule out path/CSP issues.
+If your server uses a base path, ensure src starts with / or correct relative path.
+Check browser console for 4xx/5xx or CSP errors.
+Quick test snippet (optional): temporarily change the [Image blocked: No description] to a public test image to verify layout:
+testImage not available
+
+That’s it — apply the HTML replacement and add the CSS additions. If the image still doesn’t load, paste the browser console error or the exact image URL and I’ll fix it.
+
+
 
     /* Utility */
     .muted { color:var(--muted); }
