@@ -199,14 +199,13 @@
         <div class="card">
           <h3 id="purchase">Purchase & contact</h3>
           <p class="small">Email: <a href="mailto:elearn7@proton.me">elearn7@proton.me</a></p>
-
-   <div id="paypal-container-GPTJ7BZXZ3TJC"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "GPTJ7BZXZ3TJC",
-  }).render("#paypal-container-GPTJ7BZXZ3TJC")
-</script>       
-
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="57NNBGP63C9NJ" />
+  <input type="hidden" name="currency_code" value="MXN" />
+  <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+</form>
+   
             <div class="small">Or contact to arrange corporate rates or flat fee work (marketing material proofreading, training for staff).</div>
           </div>
 
